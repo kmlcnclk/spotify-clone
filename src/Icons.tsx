@@ -204,3 +204,71 @@ export const HeartIcon = ({
     </svg>
   );
 };
+
+export const SpeakerIcon = ({
+  width,
+  height,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      role="img"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+      data-encore-id="icon"
+      className={className}
+      width={width}
+      height={height}
+      fill={color}
+    >
+      <path d="M9.741.85a.75.75 0 01.375.65v13a.75.75 0 01-1.125.65l-6.925-4a3.642 3.642 0 01-1.33-4.967 3.639 3.639 0 011.33-1.332l6.925-4a.75.75 0 01.75 0zm-6.924 5.3a2.139 2.139 0 000 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 010 4.88z"></path>
+      <path d="M11.5 13.614a5.752 5.752 0 000-11.228v1.55a4.252 4.252 0 010 8.127v1.55z"></path>
+    </svg>
+  );
+};
+
+export const StopIcon = ({
+  width,
+  height,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      role="img"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+      data-encore-id="icon"
+      className={className}
+      width={width}
+      height={height}
+      fill={color}
+    >
+      <path d="M2.7 1a.7.7 0 00-.7.7v12.6a.7.7 0 00.7.7h2.6a.7.7 0 00.7-.7V1.7a.7.7 0 00-.7-.7H2.7zm8 0a.7.7 0 00-.7.7v12.6a.7.7 0 00.7.7h2.6a.7.7 0 00.7-.7V1.7a.7.7 0 00-.7-.7h-2.6z"></path>
+    </svg>
+  );
+};
+
+export const DownloadIcon = ({
+  width,
+  height,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      role="img"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      data-encore-id="icon"
+      className={className}
+      width={width}
+      height={height}
+      fill={color}
+    >
+      <path d="M12 3a9 9 0 100 18 9 9 0 000-18zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z"></path>
+      <path d="M12 6.05a1 1 0 011 1v7.486l1.793-1.793a1 1 0 111.414 1.414L12 18.364l-4.207-4.207a1 1 0 111.414-1.414L11 14.536V7.05a1 1 0 011-1z"></path>
+    </svg>
+  );
+};

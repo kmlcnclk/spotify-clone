@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 
 function LeftSideComponent() {
   const [menu, setMenu] = useState<string>('home');
-  const [hoverState, setHoveState] = useState<string>('home');
+  const [stopHoverState, setStopHoverState] = useState<boolean>(false);
 
   return (
-    <div className="w-[188px] bg-black h-screen">
-      <div className="py-6 px-6">
+    <div className="w-auto px-2 bg-black h-screen">
+      <div className="py-6 pl-4 pr-7">
         <Icon name="spotify" width="131" height="40" color="#fff" />
       </div>
       <div>
         <div
-          className="flex items-center px-6 py-2 space-x-4 cursor-pointer"
+          className="flex items-center pl-4 pr-7 py-2 space-x-4 cursor-pointer"
           onClick={() => setMenu('home')}
         >
           {menu === 'home' ? (
@@ -29,7 +29,7 @@ function LeftSideComponent() {
           </p>
         </div>
         <div
-          className="flex items-center px-6 py-2 space-x-4 cursor-pointer"
+          className="flex items-center pl-4 pr-7 py-2 space-x-4 cursor-pointer"
           onClick={() => setMenu('search')}
         >
           {menu === 'search' ? (
@@ -46,7 +46,7 @@ function LeftSideComponent() {
           </p>
         </div>
         <div
-          className="flex items-center px-6 py-2 space-x-4 cursor-pointer"
+          className="flex items-center pl-4 pr-7 py-2 space-x-4 cursor-pointer"
           onClick={() => setMenu('library')}
         >
           {menu === 'library' ? (
@@ -56,14 +56,14 @@ function LeftSideComponent() {
           )}
           <p
             className={`${
-              menu === 'library' && hoverState ? 'text-white' : 'text-[#b3b3b3]'
+              menu === 'library' ? 'text-white' : 'text-[#b3b3b3]'
             } text-sm font-semibold hover:text-white transition-all`}
           >
             Your Library
           </p>
         </div>
       </div>
-      <div className="mt-7 px-6 py-2 space-y-4">
+      <div className="mt-7 pl-4 py-2 space-y-4">
         <div
           className="flex items-center space-x-4 cursor-pointer"
           onClick={() => setMenu('create-playlist')}
@@ -89,9 +89,42 @@ function LeftSideComponent() {
           <p
             className={`${
               menu === 'liked-songs' ? 'text-white' : 'text-[#b3b3b3]'
-            } text-sm font-semibold hover:text-white transition-all`}
+            } text-sm font-semibold hover:text-white transition-all `}
           >
             Liked Songs
+          </p>
+          <div
+            onMouseEnter={() => setStopHoverState(true)}
+            onMouseLeave={() => setStopHoverState(false)}
+          >
+            {stopHoverState ? (
+              <Icon name="stop" width="16" height="16" color="#fff" />
+            ) : (
+              <Icon name="speaker" width="16" height="16" color="#1ed760" />
+            )}
+          </div>
+        </div>
+        <div className="border-t-[1px] border-[#282828] mr-3"></div>
+        <div className="space-y-3">
+          <p className="text-[#b3b3b3] text-sm font-semibold cursor-pointer hover:text-white transition-all">
+            My Playlist #3
+          </p>
+          <p className="text-[#b3b3b3] text-sm font-semibold cursor-pointer hover:text-white transition-all">
+            My Shazam Tracks
+          </p>
+          <p className="text-[#b3b3b3] text-sm font-semibold cursor-pointer hover:text-white transition-all">
+            My Shazam Songs
+          </p>
+          <p className="text-[#b3b3b3] text-sm font-semibold cursor-pointer hover:text-white transition-all">
+            ay yolu bilmiyor
+          </p>
+        </div>
+      </div>
+      <div className="relative">
+        <div className="pl-4 flex space-x-4 absolute -bottom-24 justify-center items-center cursor-pointer">
+          <Icon name="download" width="24" height="24" color="#b3b3b3" />
+          <p className="text-[#b3b3b3] text-sm font-semibold hover:text-white transition-all">
+            Install App
           </p>
         </div>
       </div>
