@@ -12,6 +12,9 @@ import {
   SpeakerIcon,
   StopIcon,
   DownloadIcon,
+  LeftArrowIcon,
+  RightArrowIcon,
+  BottomIcon,
 } from './Icons';
 
 type IconTypes = {
@@ -46,6 +49,9 @@ const Icon: any = ({
     speaker: SpeakerIcon,
     stop: StopIcon,
     download: DownloadIcon,
+    leftArrow: LeftArrowIcon,
+    rightArrow: RightArrowIcon,
+    bottom: BottomIcon,
   };
 
   const Component = icons[name];

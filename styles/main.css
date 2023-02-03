@@ -1,0 +1,10 @@
+#menu-dropdown {
+  & .ant-dropdown {
+    & .ant-dropdown-menu {
+      @apply bg-[#282828];
+      & .ant-dropdown-menu-title-content {
+        @apply !text-white;
+      }
+    }
+  }
+}

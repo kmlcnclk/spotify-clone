@@ -272,3 +272,69 @@ export const DownloadIcon = ({
     </svg>
   );
 };
+
+export const LeftArrowIcon = ({
+  width,
+  height,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      role="img"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+      data-encore-id="icon"
+      className={className}
+      width={width}
+      height={height}
+      fill={color}
+    >
+      <path d="M11.03.47a.75.75 0 010 1.06L4.56 8l6.47 6.47a.75.75 0 11-1.06 1.06L2.44 8 9.97.47a.75.75 0 011.06 0z"></path>
+    </svg>
+  );
+};
+
+export const RightArrowIcon = ({
+  width,
+  height,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      role="img"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+      data-encore-id="icon"
+      className={className}
+      width={width}
+      height={height}
+      fill={color}
+    >
+      <path d="M4.97.47a.75.75 0 000 1.06L11.44 8l-6.47 6.47a.75.75 0 101.06 1.06L13.56 8 6.03.47a.75.75 0 00-1.06 0z"></path>
+    </svg>
+  );
+};
+
+export const BottomIcon = ({
+  width,
+  height,
+  color,
+  className,
+}: SVGProps<SVGSVGElement> & { size?: number | string }) => {
+  return (
+    <svg
+      role="img"
+      aria-hidden="true"
+      viewBox="0 0 16 16"
+      data-encore-id="icon"
+      className={className}
+      width={width}
+      height={height}
+      fill={color}
+    >
+      <path d="M14 6l-6 6-6-6h12z"></path>
+    </svg>
+  );
+};
