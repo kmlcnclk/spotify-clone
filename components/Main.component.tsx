@@ -57,10 +57,10 @@ function MainComponent() {
     <div className="bg-[#1E1E1E] w-full">
       <div className="flex justify-between items-center mx-5 my-4">
         <div className="flex items-center justify-center space-x-4">
-          <div className="bg-[#0a0a0a] p-2 rounded-full">
+          <div className="bg-[#0a0a0a] p-2 rounded-full cursor-pointer">
             <Icon name="leftArrow" width="17" height="17" color="#fff" />
           </div>
-          <div className="bg-[#131313] p-2 rounded-full">
+          <div className="bg-[#131313] p-2 rounded-full cursor-pointer">
             <Icon name="rightArrow" width="17" height="17" color="#9d9d9d" />
           </div>
         </div>
