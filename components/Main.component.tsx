@@ -7,26 +7,48 @@ import NextImage from 'next/image';
 const items: MenuProps['items'] = [
   {
     key: '1',
-    label: <div>Account</div>,
+    label: (
+      <div className="flex items-center justify-between">
+        <p className="text-sm font-semibold">Account</p>
+        <Icon name="externalLink" width="16" height="16" color="#fff" />
+      </div>
+    ),
   },
   {
     key: '2',
-    label: <div>Profile</div>,
+    label: (
+      <div>
+        <p className="text-sm font-semibold">Profile</p>
+      </div>
+    ),
   },
   {
     key: '3',
-    label: <div>Upgrade to Premium</div>,
+    label: (
+      <div className="flex items-center justify-between">
+        <p className="text-sm font-semibold">Upgrade to Premium</p>
+        <Icon name="externalLink" width="16" height="16" color="#fff" />
+      </div>
+    ),
   },
   {
     key: '4',
-    label: <div>Settings</div>,
+    label: (
+      <div>
+        <p className="text-sm font-semibold">Settings</p>
+      </div>
+    ),
   },
   {
     type: 'divider',
   },
   {
     key: '5',
-    label: <div>Logout</div>,
+    label: (
+      <div>
+        <p className="text-sm font-semibold">Logout</p>
+      </div>
+    ),
   },
 ];
 
@@ -42,10 +64,7 @@ function MainComponent() {
             <Icon name="rightArrow" width="17" height="17" color="#9d9d9d" />
           </div>
         </div>
-        <div
-          className="flex items-center justify-center space-x-3 mr-40"
-          id="menu-dropdown"
-        >
+        <div className="flex items-center justify-center space-x-3">
           <button className="bg-transparent border border-[#878787] text-white text-sm font-semibold px-3 py-1 rounded-full hover:scale-105 transition-all hover:border-white">
             Upgrade
           </button>
@@ -67,6 +86,7 @@ function MainComponent() {
               <Icon name="bottom" width="17" height="17" color="#fff" />
             </div>
           </Dropdown>
+          <div className="relative" id="menu-dropdown"></div>
         </div>
       </div>
     </div>

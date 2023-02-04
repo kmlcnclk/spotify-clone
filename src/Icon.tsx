@@ -15,6 +15,7 @@ import {
   LeftArrowIcon,
   RightArrowIcon,
   BottomIcon,
+  ExternalLinkIcon,
 } from './Icons';
 
 type IconTypes = {
@@ -52,6 +53,7 @@ const Icon: any = ({
     leftArrow: LeftArrowIcon,
     rightArrow: RightArrowIcon,
     bottom: BottomIcon,
+    externalLink: ExternalLinkIcon,
   };
 
   const Component = icons[name];

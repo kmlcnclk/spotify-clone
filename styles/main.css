@@ -1,7 +1,14 @@
 #menu-dropdown {
   & .ant-dropdown {
     & .ant-dropdown-menu {
-      @apply bg-[#282828];
+      @apply bg-[#282828] w-52;
+      & .ant-dropdown-menu-item-divider {
+        @apply !bg-[#ffffff1a];
+      }
+      & .ant-dropdown-menu-item {
+        @apply hover:!bg-[#3e3e3e] !bg-[#282828] !transition-all;
+      }
+
       & .ant-dropdown-menu-title-content {
         @apply !text-white;
       }
