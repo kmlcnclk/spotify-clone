@@ -1,8 +1,9 @@
 import Icon from '@/src/Icon';
-import React, { useRef } from 'react';
+import React from 'react';
 import type { MenuProps } from 'antd';
-import { Button, Dropdown } from 'antd';
+import { Dropdown } from 'antd';
 import NextImage from 'next/image';
+import CardComponent from './Card.component';
 
 const items: MenuProps['items'] = [
   {
@@ -54,8 +55,8 @@ const items: MenuProps['items'] = [
 
 function MainComponent() {
   return (
-    <div className="bg-[#1E1E1E] w-full">
-      <div className="flex justify-between items-center mx-5 my-4">
+    <div className="bg-[#121212] w-full">
+      <div className="flex justify-between items-center mx-6 my-4">
         <div className="flex items-center justify-center space-x-4">
           <div className="bg-[#0a0a0a] p-2 rounded-full cursor-pointer">
             <Icon name="leftArrow" width="17" height="17" color="#fff" />
@@ -87,6 +88,14 @@ function MainComponent() {
             </div>
           </Dropdown>
           <div className="relative" id="menu-dropdown"></div>
+        </div>
+      </div>
+      <div className="mx-6 my-8">
+        <h3 className="text-2xl font-bold text-white">Recently played</h3>
+        <div className="grid grid-cols-5 mt-7">
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
         </div>
       </div>
     </div>
