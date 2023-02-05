@@ -33,8 +33,8 @@ const CardComponent: React.FC<CardComponentProps> = ({
             }}
             className="relative rounded-md bg-[#282828]"
           ></div>
-          <h5 className="mt-4 bg-[#282828] w-full h-6"></h5>
-          <p className="mt-3 bg-[#282828] w-full h-8"></p>
+          <h5 className="mt-4 bg-[#282828] w-full h-5"></h5>
+          <p className="mt-3 bg-[#282828] w-full h-6"></p>
         </div>
       ) : (
         <div
