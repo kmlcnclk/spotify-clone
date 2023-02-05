@@ -38,7 +38,7 @@ const CardComponent: React.FC<CardComponentProps> = ({
         </div>
       ) : (
         <div
-          className="w-[201px] h-[291.38px] bg-[#181818] hover:bg-[#282828] transition-all duration-500 cursor-pointer rounded-md p-4"
+          className="w-full h-auto bg-[#181818] hover:bg-[#282828] transition-all duration-500 cursor-pointer rounded-md p-4"
           onMouseEnter={() => {
             if (!stopIconState) setPlayIconState(true);
           }}
@@ -50,8 +50,8 @@ const CardComponent: React.FC<CardComponentProps> = ({
             style={{
               backgroundImage: `url(${img})`,
               backgroundSize: 'cover',
-              width: '169px',
-              height: '169px',
+              width: '177px',
+              height: '177px',
             }}
             className="relative rounded-md"
           >

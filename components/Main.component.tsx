@@ -120,8 +120,11 @@ function MainComponent() {
         </div>
       </div>
       <div className="mx-6 my-8">
-        <h3 className="text-2xl font-bold text-white">Recently played</h3>
-        <div className="grid grid-cols-5 mt-7">
+        <div className="flex items-center justify-between">
+          <h3 className="text-2xl font-bold text-white">Recently played</h3>
+          <p className="text-[#b3b3b3] text-sm font-semibold hover:underline cursor-pointer">SHOW ALL</p>
+        </div>
+        <div className="grid grid-cols-5 mt-7 gap-5">
           {data.map((d, i) => (
             <CardComponent {...d} key={i} />
           ))}
