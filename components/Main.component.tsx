@@ -54,6 +54,35 @@ const items: MenuProps['items'] = [
 ];
 
 function MainComponent() {
+  const data = [
+    {
+      img: '/liked_songs.png',
+      name: 'Liked Songs',
+      numberOfSongOrNameOfArtists: '65 songs',
+    },
+    {
+      img: '/card_1.jpg',
+      name: 'Daily Mix 3',
+      numberOfSongOrNameOfArtists:
+        'Black Eyed Peas, David Guetta, Lil Nas X and more',
+    },
+    {
+      img: '/card_2.jpg',
+      name: 'Coding and Gaming with Jazz',
+      numberOfSongOrNameOfArtists: 'Programming and Coding Jazz',
+    },
+    {
+      img: '/card_3.jpg',
+      name: 'Happy Mix',
+      numberOfSongOrNameOfArtists: 'Foster The People and more',
+    },
+    {
+      img: '/card_4.jpg',
+      name: 'Daily Mix 1',
+      numberOfSongOrNameOfArtists: 'Reynmen, Tefo, Ece Ronay and more',
+    },
+  ];
+
   return (
     <div className="bg-[#121212] w-full">
       <div className="flex justify-between items-center mx-6 my-4">
@@ -93,9 +122,9 @@ function MainComponent() {
       <div className="mx-6 my-8">
         <h3 className="text-2xl font-bold text-white">Recently played</h3>
         <div className="grid grid-cols-5 mt-7">
-          <CardComponent />
-          <CardComponent />
-          <CardComponent />
+          {data.map((d, i) => (
+            <CardComponent {...d} key={i} />
+          ))}
         </div>
       </div>
     </div>
