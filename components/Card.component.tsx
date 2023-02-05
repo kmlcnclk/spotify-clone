@@ -25,11 +25,11 @@ const CardComponent: React.FC<CardComponentProps> = ({
   return (
     <>
       {pulseState ? (
-        <div className="w-[201px] h-[291.38px] bg-[#181818] cursor-pointer rounded-md p-4 animate-pulse">
+        <div className="w-full h-auto bg-[#181818] cursor-pointer rounded-md p-4 animate-pulse">
           <div
             style={{
-              width: '169px',
-              height: '169px',
+              width: '177px',
+              height: '177px',
             }}
             className="relative rounded-md bg-[#282828]"
           ></div>
