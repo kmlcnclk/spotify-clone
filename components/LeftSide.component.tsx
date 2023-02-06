@@ -6,7 +6,7 @@ function LeftSideComponent() {
   const [stopHoverState, setStopHoverState] = useState<boolean>(false);
 
   return (
-    <div className="w-auto px-2 bg-black h-screen">
+    <div className="w-auto px-2 bg-black h-fit sticky top-0">
       <div className="py-6 pl-4 pr-7">
         <Icon name="spotify" width="131" height="40" color="#fff" />
       </div>
@@ -120,14 +120,14 @@ function LeftSideComponent() {
           </p>
         </div>
       </div>
-      <div className="relative">
-        <div className="pl-4 flex space-x-4 absolute -bottom-24 justify-center items-center cursor-pointer">
+      {/* <div className="relative"> */}
+        <div className="pl-4 pb-2 flex space-x-4 mt-[70px] items-center cursor-pointer">
           <Icon name="download" width="24" height="24" color="#b3b3b3" />
           <p className="text-[#b3b3b3] text-sm font-semibold hover:text-white transition-all">
             Install App
           </p>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
