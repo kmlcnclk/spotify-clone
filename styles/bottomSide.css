@@ -1,0 +1,28 @@
+#bottomSide {
+  #sound {
+    .ant-slider {
+      .ant-slider-rail {
+        @apply !bg-[#ffffff4d];
+      }
+      .ant-slider-track {
+        @apply !bg-white;
+      }
+      .ant-slider-handle {
+        /* @apply hidden; */
+        &:after {
+          box-shadow: none !important;
+        }
+      }
+
+      &:hover,
+      &:active {
+        .ant-slider-handle {
+          @apply block;
+        }
+        .ant-slider-track {
+          @apply !bg-[#1FDF64];
+        }
+      }
+    }
+  }
+}

@@ -17,6 +17,19 @@ import {
   BottomIcon,
   ExternalLinkIcon,
   PlayIcon,
+  HeartUnFillIcon,
+  PictureInPictureIcon,
+  ShuffleIcon,
+  PrevIcon,
+  NextIcon,
+  RepeatIcon,
+  RepeatOneIcon,
+  LyricsIcon,
+  QueueIcon,
+  ConnectDeviceIcon,
+  MuteSpeakerIcon,
+  OneSpeakerIcon,
+  TwoSpeakerIcon,
 } from './Icons';
 
 type IconTypes = {
@@ -56,6 +69,19 @@ const Icon: any = ({
     bottom: BottomIcon,
     externalLink: ExternalLinkIcon,
     play: PlayIcon,
+    heartUnFill: HeartUnFillIcon,
+    pictureInPicture: PictureInPictureIcon,
+    shuffle: ShuffleIcon,
+    prev: PrevIcon,
+    next: NextIcon,
+    repeat: RepeatIcon,
+    repeatOne: RepeatOneIcon,
+    lyrics: LyricsIcon,
+    queue: QueueIcon,
+    connectDevice: ConnectDeviceIcon,
+    muteSpeaker: MuteSpeakerIcon,
+    oneSpeaker: OneSpeakerIcon,
+    twoSpeaker: TwoSpeakerIcon,
   };
 
   const Component = icons[name];
