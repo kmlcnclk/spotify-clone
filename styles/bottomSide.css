@@ -1,5 +1,6 @@
 #bottomSide {
-  #sound {
+  #sound,
+  #musicSlider {
     .ant-slider {
       .ant-slider-rail {
         @apply !bg-[#ffffff4d];

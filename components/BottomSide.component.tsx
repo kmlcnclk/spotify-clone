@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import NextImage from 'next/image';
 import Icon from '@/src/Icon';
 import { Slider } from 'antd';
+import moment from 'moment';
+import momentDurationFormatSetup from 'moment-duration-format';
 
 function BottomSideComponent() {
   const [heartState, setHeartState] = useState(false);
@@ -13,6 +15,11 @@ function BottomSideComponent() {
   const [queueState, setQueueState] = useState(false);
   const [soundSlideValue, setSoundSlideValue] = useState(30);
   const [soundValue, setSoundValue] = useState('one');
+  const [songSlideValue, setSongSlideValue] = useState(100);
+  const max = 240;
+
+  // @ts-ignore
+  momentDurationFormatSetup(moment);
 
   const changingSlideValueFunction = async (value: number) => {
     if (value === 0) {
@@ -26,6 +33,14 @@ function BottomSideComponent() {
     }
     await setSoundSlideValue(value);
   };
+
+  const changingSongValueFunction = async (value: number) => {
+    setSongSlideValue(value);
+  };
+
+  function formatDuration(duration: number) {
+    return moment.duration(duration, 'seconds').format('m:ss', { trim: false });
+  }
 
   return (
     <div className="sticky bottom-0 left-0 right-0" id="bottomSide">
@@ -81,7 +96,7 @@ function BottomSideComponent() {
           </div>
         </div>
         <div className="flex items-center space-x-5">
-          <div>
+          <div className="flex items-center flex-col">
             <div className="flex items-center space-x-5">
               {shuffleState ? (
                 <div
@@ -197,6 +212,20 @@ function BottomSideComponent() {
                 </div>
               )}
             </div>
+            <div id="musicSlider" className="-mt-1 -mb-4 flex items-center space-x-3">
+              <p className="text-[#a7a7a7] text-xs">
+                {formatDuration(songSlideValue)}
+              </p>
+              <Slider
+                defaultValue={songSlideValue}
+                className="w-[437.59px] mb-[10px]"
+                max={max}
+                value={songSlideValue}
+                onChange={changingSongValueFunction}
+                tooltip={{ open: false }}
+              />
+              <p className="text-[#a7a7a7] text-xs">{formatDuration(max)}</p>
+            </div>
           </div>
         </div>
         <div className="flex items-center space-x-5">
@@ -265,40 +294,68 @@ function BottomSideComponent() {
           />
           <div className="w-[125px] flex items-center" id="sound">
             {soundValue === 'mute' && (
-              <Icon
-                name="muteSpeaker"
-                width="16"
-                height="16"
-                color="#b3b3b3"
-                className="hover:fill-white cursor-pointer mb-2"
-              />
+              <div
+                onClick={() => {
+                  setSoundSlideValue(0);
+                  setSoundValue('mute');
+                }}
+              >
+                <Icon
+                  name="muteSpeaker"
+                  width="16"
+                  height="16"
+                  color="#b3b3b3"
+                  className="hover:fill-white cursor-pointer mb-2"
+                />
+              </div>
             )}
             {soundValue === 'one' && (
-              <Icon
-                name="oneSpeaker"
-                width="16"
-                height="16"
-                color="#b3b3b3"
-                className="hover:fill-white cursor-pointer mb-2"
-              />
+              <div
+                onClick={() => {
+                  setSoundSlideValue(0);
+                  setSoundValue('mute');
+                }}
+              >
+                <Icon
+                  name="oneSpeaker"
+                  width="16"
+                  height="16"
+                  color="#b3b3b3"
+                  className="hover:fill-white cursor-pointer mb-2"
+                />
+              </div>
             )}
             {soundValue === 'two' && (
-              <Icon
-                name="twoSpeaker"
-                width="16"
-                height="16"
-                color="#b3b3b3"
-                className="hover:fill-white cursor-pointer mb-2"
-              />
+              <div
+                onClick={() => {
+                  setSoundSlideValue(0);
+                  setSoundValue('mute');
+                }}
+              >
+                <Icon
+                  name="twoSpeaker"
+                  width="16"
+                  height="16"
+                  color="#b3b3b3"
+                  className="hover:fill-white cursor-pointer mb-2"
+                />
+              </div>
             )}
             {soundValue === 'three' && (
-              <Icon
-                name="speaker"
-                width="16"
-                height="16"
-                color="#b3b3b3"
-                className="hover:fill-white cursor-pointer mb-2"
-              />
+              <div
+                onClick={() => {
+                  setSoundSlideValue(0);
+                  setSoundValue('mute');
+                }}
+              >
+                <Icon
+                  name="speaker"
+                  width="16"
+                  height="16"
+                  color="#b3b3b3"
+                  className="hover:fill-white cursor-pointer mb-2"
+                />
+              </div>
             )}
             <Slider
               defaultValue={soundSlideValue}
